@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@PropertySource("file:${APP_CONFIG_DIR:./../}/properties/jsonSchemas.properties")
+@PropertySource("file:${APP_CONFIG_DIR:./..}/properties/jsonSchemas.properties")
 @ConfigurationProperties("")
 public class JsonSchemaMapProps {
 	private Map<String, String> jsonSchemaPath;

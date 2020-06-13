@@ -11,7 +11,6 @@ import com.ups.retail.discount.dtos.ServiceResponseDto;
 
 @ControllerAdvice
 public class ApplicationExcptionHandler {
-
 	@ExceptionHandler(Exception.class)
 	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
 	@ResponseBody
@@ -24,7 +23,6 @@ public class ApplicationExcptionHandler {
 	@ResponseBody
 	public ResponseEntity<ServiceResponseDto> handleApplicationException(
 			final ApplicationException applicationException) {
-		applicationException.printStackTrace();
 		ServiceResponseDto serviceResult = new ServiceResponseDto(applicationException.getReason());
 		return ResponseEntity.status(applicationException.getResponseCode()).body(serviceResult);
 	}
