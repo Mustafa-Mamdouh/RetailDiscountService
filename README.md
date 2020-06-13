@@ -39,4 +39,4 @@ https://github.com/Mustafa-Mamdouh/RetailDiscountService/blob/master/class_diagr
 
 ##What i have missed\
  Full documentation \
- Unit test and code coverage
+ Unit test and code coverage (PS System is tested but without unittest)
