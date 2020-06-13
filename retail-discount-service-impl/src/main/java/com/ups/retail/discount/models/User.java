@@ -7,6 +7,7 @@ package com.ups.retail.discount.models;
 
 import java.io.Serializable;
 import java.util.Date;
+
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,8 +16,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -41,8 +40,8 @@ public class User implements Serializable {
     @Column(name = "f_name")
     private String fName;
     @Basic(optional = false)
-    @Column(name = "name")
-    private String name;
+    @Column(name = "l_name")
+    private String l_name;
     @Basic(optional = false)
     @Column(name = "registeration_date")
     @Temporal(TemporalType.TIMESTAMP)
@@ -64,7 +63,7 @@ public class User implements Serializable {
     public User(Integer id, String fName, String name, Date registerationDate, String userId) {
         this.id = id;
         this.fName = fName;
-        this.name = name;
+        this.l_name = name;
         this.registerationDate = registerationDate;
         this.userId = userId;
     }
@@ -85,12 +84,12 @@ public class User implements Serializable {
         this.fName = fName;
     }
 
-    public String getName() {
-        return name;
+    public String getLName() {
+        return l_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLName(String name) {
+        this.l_name = name;
     }
 
     public Date getRegisterationDate() {

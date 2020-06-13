@@ -1,4 +1,4 @@
-package com.ups.retail.discount.services.impl;
+package com.ups.retail.discount.roles;
 
 import java.util.HashMap;
 import java.util.List;
@@ -15,11 +15,11 @@ import com.ups.retail.discount.services.interfaces.DiscountRole;
 import com.ups.retail.discount.services.types.DiscountContext;
 
 @Component
-@Order(1)
-class UserTypeDiscountRoleImpl implements DiscountRole {
+@Order(10)
+class UserTypeDiscountRole implements DiscountRole {
 	@Autowired
-	UserTypesRepo userTypesRepo;
-	HashMap<Integer, UserTypes> cachedUserTypesMap;
+	private  UserTypesRepo userTypesRepo;
+	private  HashMap<Integer, UserTypes> cachedUserTypesMap;
 
 	@PostConstruct
 	public void init() {

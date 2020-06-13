@@ -3,8 +3,8 @@ package com.ups.retail.discount.dtos;
 import java.util.List;
 
 public class BillDto {
-	List<ItemsDto> items;
-	String userId;
+	private  List<ItemsDto> items;
+	private  String userId;
 
 	public BillDto() {
 		super();

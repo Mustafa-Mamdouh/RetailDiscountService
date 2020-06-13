@@ -10,14 +10,12 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import com.ups.retail.discount.dtos.ServiceResponseDto;
 
 @ControllerAdvice
-public class WsExcptionHandler {
+public class ApplicationExcptionHandler {
 
 	@ExceptionHandler(Exception.class)
 	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
 	@ResponseBody
-	public ResponseEntity<ServiceResponseDto> handleValidationException(final Exception internalServerException) {
-		internalServerException.printStackTrace();
-
+	public ResponseEntity<ServiceResponseDto> handleGeneralException(final Exception internalServerException) {
 		ServiceResponseDto serviceResult = new ServiceResponseDto(internalServerException.getMessage());
 		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(serviceResult);
 	}

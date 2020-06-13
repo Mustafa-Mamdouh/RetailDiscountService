@@ -1,4 +1,4 @@
-package com.ups.retail.discount.services.impl;
+package com.ups.retail.discount.roles;
 
 import java.util.Date;
 
@@ -14,11 +14,11 @@ import com.ups.retail.discount.services.types.DiscountContext;
 import com.ups.retail.discount.utilites.DiscountConfigurationUtility;
 
 @Component
-@Order(2)
+@Order(20)
 class LoyalUSerDiscountRole implements DiscountRole {
-	Integer loyalYearsNumber;
-	Integer discountValue;
-	String discountType;
+	private  Integer loyalYearsNumber;
+	private  Integer discountValue;
+	private  String discountType;
 
 	@Autowired
 	public LoyalUSerDiscountRole(DiscountConfigurationUtility discountConfigurationUtility) {

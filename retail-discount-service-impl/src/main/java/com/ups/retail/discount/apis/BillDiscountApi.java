@@ -18,9 +18,9 @@ import com.ups.retail.discount.utilites.JsonScehmaValidationManager;
 @RequestMapping("/discount")
 public class BillDiscountApi {
 	@Autowired
-	CalculateDiscountService calculateDiscountService;
+	private CalculateDiscountService calculateDiscountService;
 	@Autowired
-	JsonScehmaValidationManager schemaValdiationManager;
+	private JsonScehmaValidationManager schemaValdiationManager;
 
 	@PostMapping
 	public ResponseEntity<ServiceResponseDto> calculateDiscountApi(@RequestBody BillDto billDto) {

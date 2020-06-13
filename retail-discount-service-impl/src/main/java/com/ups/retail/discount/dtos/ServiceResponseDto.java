@@ -1,10 +1,15 @@
 package com.ups.retail.discount.dtos;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+@JsonInclude(Include.NON_NULL)
 public class ServiceResponseDto {
-	String errorMessage;
-	Double percentageDiscountAmount;
-	Double CashDiscountAmount;
-	Double finalBill;
+
+	private String errorMessage;
+	private Double percentageDiscountAmount;
+	private Double CashDiscountAmount;
+	private Double finalBill;
 
 	public ServiceResponseDto() {
 		super();

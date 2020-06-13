@@ -3,14 +3,14 @@ package com.ups.retail.discount.dtos;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class ItemsDto {
-	String itemName;
-	Double quantity;
-	Double unitPrice;
-	String itemType;
-	Double totalPrice;
+	private String itemName;
+	private Double quantity;
+	private Double unitPrice;
+	private String itemType;
+	private Double totalPrice;
 	@JsonIgnore
-	Boolean applyDiscount;
-	
+	private Boolean applyDiscount;
+
 	public ItemsDto() {
 		super();
 	}

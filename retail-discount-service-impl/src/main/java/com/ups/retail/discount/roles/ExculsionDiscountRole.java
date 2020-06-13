@@ -1,4 +1,4 @@
-package com.ups.retail.discount.services.impl;
+package com.ups.retail.discount.roles;
 
 import java.util.HashSet;
 import java.util.List;
@@ -15,9 +15,9 @@ import com.ups.retail.discount.services.types.DiscountContext;
 import com.ups.retail.discount.utilites.DiscountConfigurationUtility;
 
 @Component
-@Order(3)
-public class ExculsionDiscountRole implements DiscountRole {
-	Set<String> excludeFromDiscountItemTypes;
+@Order(30)
+class ExculsionDiscountRole implements DiscountRole {
+	private  Set<String> excludeFromDiscountItemTypes;
 
 	@Autowired
 	public ExculsionDiscountRole(DiscountConfigurationUtility discountConfigurationUtility) {

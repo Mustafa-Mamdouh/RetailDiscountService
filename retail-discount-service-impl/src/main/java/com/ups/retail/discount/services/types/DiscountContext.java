@@ -4,13 +4,14 @@ import com.ups.retail.discount.dtos.BillDto;
 import com.ups.retail.discount.models.User;
 
 public class DiscountContext {
-	BillDto billDto;
-	Short currentPercentageDiscount;
-	Integer currentCashDiscount;
-	User user;
-	Double percentageDiscountAmount;
-	Double CashDiscountAmount;
-	Double finalBill;
+	private BillDto billDto;
+	private Short currentPercentageDiscount;
+	private Integer currentCashDiscount;
+	private User user;
+	private Double percentageDiscountAmount;
+	private Double CashDiscountAmount;
+	private Double finalBill;
+
 	public DiscountContext() {
 		super();
 		currentPercentageDiscount = 0;
@@ -37,7 +38,6 @@ public class DiscountContext {
 	public void setBillDto(BillDto billDto) {
 		this.billDto = billDto;
 	}
-
 
 	public Short getCurrentPercentageDiscount() {
 		return currentPercentageDiscount;

@@ -56,7 +56,6 @@ public class JsonScehmaValidationManager {
 		// Problem handler
 		ProblemHandler handler = ProblemHandler.collectingTo(problems);
 		String jsonObject = null;
-		System.out.println(jsonObjectParam);
 		if (jsonObjectParam instanceof String) {
 			jsonObject = (String) jsonObjectParam;
 		} else {
@@ -99,7 +98,4 @@ public class JsonScehmaValidationManager {
 		return jsonSchema;
 	}
 
-	private JsonValidationService getService() {
-		return service;
-	}
 }

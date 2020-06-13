@@ -14,8 +14,8 @@ import com.ups.retail.discount.repos.DiscountConfigurationRepo;
 @Component
 public class DiscountConfigurationUtility {
 	@Autowired
-	DiscountConfigurationRepo discountConfiguration;
-	HashMap<String, String> propertyMap;
+	private DiscountConfigurationRepo discountConfiguration;
+	private HashMap<String, String> propertyMap;
 
 	@PostConstruct
 	public void init() {

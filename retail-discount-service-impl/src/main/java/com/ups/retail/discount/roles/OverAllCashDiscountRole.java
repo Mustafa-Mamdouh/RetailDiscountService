@@ -1,4 +1,4 @@
-package com.ups.retail.discount.services.impl;
+package com.ups.retail.discount.roles;
 
 import java.util.List;
 
@@ -13,10 +13,10 @@ import com.ups.retail.discount.services.types.DiscountContext;
 import com.ups.retail.discount.utilites.DiscountConfigurationUtility;
 
 @Component
-@Order(4)
+@Order(40)
 public class OverAllCashDiscountRole implements DiscountRole {
-	Integer cashAmountDiscount;
-	Integer cashAmountDiscountUnit;
+	private Integer cashAmountDiscount;
+	private  Integer cashAmountDiscountUnit;
 
 	@Autowired
 	public OverAllCashDiscountRole(DiscountConfigurationUtility discountConfigurationUtility) {

@@ -27,8 +27,9 @@ public class ApplicationLogApect {
 		return proceed;
 	}
 
-//	@AfterThrowing(pointcut = "execution(* com.ups.retail.discount.*..*(..))", throwing = "ex")
-//	public void throwing(JoinPoint joinPoint, Exception ex) {
-//		ex.printStackTrace();
-//	}
+	@AfterThrowing(pointcut = "execution(* com.ups.retail.discount.*..*(..))", throwing = "ex")
+	public void throwing(JoinPoint joinPoint, Exception ex) {
+		String method = joinPoint.getSignature().getName();
+		logger.error("Exception at method " + method, ex);
+	}
 }

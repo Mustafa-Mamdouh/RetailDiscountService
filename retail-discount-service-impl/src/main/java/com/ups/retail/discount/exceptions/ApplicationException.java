@@ -7,8 +7,8 @@ public class ApplicationException extends RuntimeException {
 	 * 
 	 */
 	private static final long serialVersionUID = -184305369725661529L;
-	Integer responseCode;
-	String reason;
+	private Integer responseCode;
+	private String reason;
 	public ApplicationException(ErrorMessages errorMessage) {
 		super(errorMessage.getMessage());
 		this.responseCode = errorMessage.getCode();

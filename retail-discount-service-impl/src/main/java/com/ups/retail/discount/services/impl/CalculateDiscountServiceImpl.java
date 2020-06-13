@@ -19,9 +19,9 @@ import com.ups.retail.discount.services.types.DiscountContext;
 @Component
 class CalculateDiscountServiceImpl implements CalculateDiscountService {
 	@Autowired
-	UsersRepo UsersRepo;
+	private UsersRepo UsersRepo;
 	@Autowired
-	List<DiscountRole> roles;
+	private List<DiscountRole> roles;
 
 	@Override
 	public ServiceResponseDto discountValue(BillDto billDto) {
