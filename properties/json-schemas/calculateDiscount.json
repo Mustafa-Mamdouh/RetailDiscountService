@@ -93,7 +93,8 @@
                                 "default": 0.0,
                                 "examples": [
                                     10.5
-                                ]
+                                ],
+				"pattern":"^(?:[1-9]\\d*|0)?(?:\\.\\d+)?$"
                             },
                             "unitPrice": {
                                 "$id": "#/properties/items/items/anyOf/0/properties/unitPrice",
@@ -103,7 +104,8 @@
                                 "default": 0.0,
                                 "examples": [
                                     10.5
-                                ]
+                                ],
+				"pattern":"^(?:[1-9]\\d*|0)?(?:\\.\\d+)?$"
                             },
                             "itemType": {
                                 "$id": "#/properties/items/items/anyOf/0/properties/itemType",
