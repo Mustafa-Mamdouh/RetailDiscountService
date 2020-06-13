@@ -37,6 +37,6 @@ API Path : localhost:8086/discount\
 ##Class Diagram
 https://github.com/Mustafa-Mamdouh/RetailDiscountService/blob/master/class_diagram.png
 
-##What i have missed
- Full documentation 
+##What i have missed\
+ Full documentation \
  Unit test and code coverage
