@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: retail-discount-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/RetailDiscount
+    username: root
+    password: root
+
+  jpa:
+    hibernate.ddl-auto: none
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl      
+logging:
+  level:
+    org.springframework.web: ERROR
+    com._4gtss.notification: DEBUG
+server:
+  port: 8086

@@ -1,0 +1,125 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "userId": "userId",
+            "items": [
+                {
+                    "itemName": "itemName",
+                    "quantity": 10.5,
+                    "unitPrice": 10.5,
+                    "itemType": "grocery"
+                }
+            ]
+        }
+    ],
+    "required": [
+        "userId",
+        "items"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "userId": {
+            "$id": "#/properties/userId",
+            "type": "string",
+            "title": "The userId schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "userId"
+            ]
+        },
+        "items": {
+            "$id": "#/properties/items",
+            "type": "array",
+            "title": "The items schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "itemName": "itemName",
+                        "quantity": 10.5,
+                        "unitPrice": 10.5,
+                        "itemType": "grocery"
+                    }
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "anyOf": [
+                    {
+                        "$id": "#/properties/items/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "itemName": "itemName",
+                                "quantity": 10.5,
+                                "unitPrice": 10.5,
+                                "itemType": "grocery"
+                            }
+                        ],
+                        "required": [
+                            "itemName",
+                            "quantity",
+                            "unitPrice",
+                            "itemType"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "itemName": {
+                                "$id": "#/properties/items/items/anyOf/0/properties/itemName",
+                                "type": "string",
+                                "title": "The itemName schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "itemName"
+                                ]
+                            },
+                            "quantity": {
+                                "$id": "#/properties/items/items/anyOf/0/properties/quantity",
+                                "type": "number",
+                                "title": "The quantity schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0.0,
+                                "examples": [
+                                    10.5
+                                ]
+                            },
+                            "unitPrice": {
+                                "$id": "#/properties/items/items/anyOf/0/properties/unitPrice",
+                                "type": "number",
+                                "title": "The unitPrice schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0.0,
+                                "examples": [
+                                    10.5
+                                ]
+                            },
+                            "itemType": {
+                                "$id": "#/properties/items/items/anyOf/0/properties/itemType",
+                                "type": "string",
+                                "title": "The itemType schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "grocery"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "$id": "#/properties/items/items"
+            }
+        }
+    }
+}
