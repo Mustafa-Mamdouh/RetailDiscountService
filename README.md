@@ -1,14 +1,22 @@
 # RetailDiscountService
 
-How to test
+## How to test
 
-*First apply creation script from db_scripts to your mysql db
-*Second go to retail-discount-service-impl folder and run the below command after change the username and password to you local database instance credentails
+First apply creation script from db_scripts to your mysql db.
+
+Second go to retail-discount-service-impl folder and run the below command after change the username and password to you local database instance credential
+```java
 	mvn spring-boot:run -Drun.arguments=--spring.datasource.username=root,--spring.datasource.username=root1
-*Now you can test the application through api localhost:8086/discount
+```
 
-*Example of request Body
-	{
+## Server Date
+
+URL : 8086\
+API Path : localhost:8086/discount\
+##Example of request Body
+```json
+
+{
 	"userId":"1",
 	"items":[
 	{
@@ -24,5 +32,7 @@ How to test
 	}
 		]
 }
+```
+
 
 
