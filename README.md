@@ -21,7 +21,7 @@ Second go to retail-discount-service-impl folder and run the below command after
 	mvn spring-boot:run -Drun.arguments=--spring.datasource.username=root,--spring.datasource.username=root1
 ```
 
-## Server Date
+## Server Data
 
 URL : 8086\
 API Path : localhost:8086/discount\
@@ -46,9 +46,8 @@ API Path : localhost:8086/discount\
 }
 ```
 
-##Class Diagram
+## Class Diagram
 ![alt text](https://raw.githubusercontent.com/Mustafa-Mamdouh/RetailDiscountService/master/class_diagram.png)
 
-##What i have missed\
- Full documentation \
- Unit test and code coverage (PS System is tested but without unittest)
+## What i have missed
+ Full documentation 
