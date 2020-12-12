@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: retail-discount-service
+  datasource:
+    url: jdbc:h2:~/RetailDiscount;AUTO_SERVER=TRUE;
+
+  jpa:
+    hibernate.ddl-auto: create
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl      
+logging:
+  level:
+    org.springframework.web: ERROR
+    com._4gtss.notification: DEBUG
+server:
+  port: 8086
