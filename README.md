@@ -20,7 +20,10 @@ Second go to retail-discount-service-impl folder and run the below command after
 ```java
 	mvn spring-boot:run -Drun.arguments=--spring.datasource.username=root,--spring.datasource.username=root1
 ```
-
+Run unit tests and generate jacoco coverage report 
+```java
+	mvn clean verify
+```
 ## Server Data
 
 URL : 8086\
